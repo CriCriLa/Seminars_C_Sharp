@@ -24,17 +24,29 @@
 // координаты двух точек и находит расстояние между ними 
 // в трехмерном пространстве.
 
+// Console.Clear();
+// Console.WriteLine("Введите координаты первой точки: ");
+// int X1 = Convert.ToInt32(Console.ReadLine());
+// int Y1 = Convert.ToInt32(Console.ReadLine());
+// int Z1 = Convert.ToInt32(Console.ReadLine());
+
+// Console.WriteLine("Введите координаты второй точки: ");
+// int X2 = Convert.ToInt32(Console.ReadLine());
+// int Y2 = Convert.ToInt32(Console.ReadLine());
+// int Z2 = Convert.ToInt32(Console.ReadLine());
+
+// double Result = Math.Sqrt(Math.Pow((X2-X1),2)+Math.Pow((Y2-Y1),2)+Math.Pow((Z2-Z1),2));
+// Result = Math.Round(Result,2);
+// Console.WriteLine(Result);
+
+// Задача 23. Напишите программу, которая принимает на вход число N 
+// и выдает таблицу кубов чисел от 1 до N.
+
 Console.Clear();
-Console.WriteLine("Введите координаты первой точки: ");
-int X1 = Convert.ToInt32(Console.ReadLine());
-int Y1 = Convert.ToInt32(Console.ReadLine());
-int Z1 = Convert.ToInt32(Console.ReadLine());
+Console.Write("Введите число: ");
+int num = Convert.ToInt32(Console.ReadLine());
 
-Console.WriteLine("Введите координаты второй точки: ");
-int X2 = Convert.ToInt32(Console.ReadLine());
-int Y2 = Convert.ToInt32(Console.ReadLine());
-int Z2 = Convert.ToInt32(Console.ReadLine());
-
-double Result = Math.Sqrt(Math.Pow((X2-X1),2)+Math.Pow((Y2-Y1),2)+Math.Pow((Z2-Z1),2));
-Result = Math.Round(Result,2);
-Console.WriteLine(Result);
+for (int i=1; i<=num; i++)
+{
+    Console.WriteLine(Math.Pow(i,3));
+}
