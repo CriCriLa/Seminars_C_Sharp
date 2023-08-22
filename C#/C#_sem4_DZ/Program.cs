@@ -58,20 +58,15 @@ void FillArray()
 }
 
 void PrintArray()
-{}
-
-
-int[] array = 
-
-int SumNumbers()
 {
-    int result = 0;
-    while (num > 0)
+    Console.Write("[");
+    for (int i=0; i<lengthMas-1; i++)
     {
-        result = result + num%10;
-        num = num/10;
+        Console.Write($"{array[i]}, ");
     }
-    return result;
+    Console.Write($"{array[lengthMas-1]}]");
+    Console.WriteLine();
 }
 
-Console.WriteLine(SumNumbers());
+FillArray();
+PrintArray();
