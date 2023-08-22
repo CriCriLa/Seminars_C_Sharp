@@ -24,10 +24,44 @@
 // Задача 27. Напишите программу, которая принимает на вход число 
 // и выдает сумму цифр в числе.
 
+// Console.Clear();
+
+// Console.Write("Введите число: ");
+// int num = Convert.ToInt32(Console.ReadLine());
+
+// int SumNumbers()
+// {
+//     int result = 0;
+//     while (num > 0)
+//     {
+//         result = result + num%10;
+//         num = num/10;
+//     }
+//     return result;
+// }
+
+// Console.WriteLine(SumNumbers());
+
+// Задача 29. Напишите программу, которая задает массив из 
+// 8 элементов и выводит их на экран.
 Console.Clear();
 
-Console.Write("Введите число: ");
-int num = Convert.ToInt32(Console.ReadLine());
+int lengthMas = 8;
+int[] array = new int[lengthMas];
+
+void FillArray()
+{
+    for (int i=0; i<lengthMas; i++)
+    {
+        array[i] = new Random().Next(0,50);
+    }
+}
+
+void PrintArray()
+{}
+
+
+int[] array = 
 
 int SumNumbers()
 {
@@ -41,6 +75,3 @@ int SumNumbers()
 }
 
 Console.WriteLine(SumNumbers());
-
-// Задача 29. Напишите программу, которая задает массив из 
-// 8 элементов и выводит их на экран.
