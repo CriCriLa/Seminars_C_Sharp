@@ -33,6 +33,8 @@
 // Console.WriteLine(newText);
 // Console.WriteLine();
 
+// Сортировка списка по возрастанию 
+
 int[] arr = {1, 5, 4, 3, 2, 6, 7, 1, 1} ;
 
 void PrintArray(int[] array)
