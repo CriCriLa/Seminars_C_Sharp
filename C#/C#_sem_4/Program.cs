@@ -20,23 +20,43 @@
 // int result = GetSumNumber();
 // Console.WriteLine(result);
 
-// Задача 26. Принимает на вход число и выдает количестко цифр в числе. 
+// Задача 26. Принимает на вход число и выдает количество цифр в числе. 
+
+// Console.Clear();
+
+// Console.Write("Введите число: ");
+// int number = Convert.ToInt32(Console.ReadLine());
+
+// int GetCountNumber()
+// {
+//    int count = 0;
+   
+//      while (number>0)
+//      {
+//          number = number/10;
+//          count++;
+//      }
+//      return  count;
+//  }
+
+//  Console.WriteLine(GetCountNumber());
+
+// Задача 28. Принимает число N и выдает произведение чисел от 1 до N.
 
 Console.Clear();
 
 Console.Write("Введите число: ");
 int number = Convert.ToInt32(Console.ReadLine());
 
-int GetCountNumber()
-{
-   int count = 0;
+int GetNumber()
+ {
+    int result = 1;
    
-     while (number>0)
-     {
-         number = number/10;
-         count++;
-     }
-     return  count;
- }
+      for (int i = 1; i<=number; i++)
+      {
+          result  = result *i;
+      }
+      return  result;
+  }
 
- Console.WriteLine(GetCountNumber());
+Console.WriteLine(GetNumber());
