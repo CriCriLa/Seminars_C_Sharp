@@ -1,2 +1,28 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
+﻿// Задача 25. Напишите цикл, который принимает на вход два числа (А и В)
+// и возводит число А в натуральную степень В.
+Console.Clear();
+
+Console.Write("Введите число А:");
+int numA = Convert.ToInt32(Console.ReadLine());
+
+Console.Write("Введите число В:");
+int numB = Convert.ToInt32(Console.ReadLine());
+
+int MakeExponent(int num1, int num2)
+{
+    int result = numA;
+    for (int i=1; i<num2; i++)
+    {
+        result = result * numA;
+    }
+    return result;
+}
+
+Console.WriteLine(MakeExponent(numA, numB));
+
+
+// Задача 27. Напишите программу, которая принимает на вход число 
+// и выдает сумму цифр в числе.
+
+// Задача 29. Напишите программу, которая задает массив из 
+// 8 элементов и выводит их на экран.
