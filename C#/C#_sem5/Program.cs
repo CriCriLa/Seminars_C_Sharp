@@ -52,31 +52,51 @@
 // Задача  33. Задайте массив. Напишите программу, 
 // которая определяет, присутствует ли заданное число в массиве.
 
+// Console.Clear();
+// int arrayLength = 10;
+// int[] array = new int[arrayLength];
+
+// Console.Write("Введите число: ");
+// int num = Convert.ToInt32(Console.ReadLine());
+
+// bool isFind=false;
+
+// for (int i=0; i< array.Length; i++)
+// {
+//     array[i] = new Random().Next(-9,10);
+//     Console.Write (array[i]+ " ");
+
+//     if (num==array[i])
+//     {
+//         isFind = true;
+//     }
+// }
+// Console.WriteLine();
+// if (isFind==true)
+// { 
+//     Console.WriteLine("Да");
+// }
+// else
+// {
+//     Console.WriteLine("Нет");
+// }
+
+// Задача 35. Задать одномерный массиы из 123 случайных чисел. 
+// Найти количество элементов массива, значения которых лежат в отрезке [10,99]
+
 Console.Clear();
-int arrayLength = 10;
+int arrayLength = 123;
 int[] array = new int[arrayLength];
 
-Console.Write("Введите число: ");
-int num = Convert.ToInt32(Console.ReadLine());
-
-bool isFind=false;
+int result=0;
 
 for (int i=0; i< array.Length; i++)
 {
-    array[i] = new Random().Next(-9,10);
+    array[i] = new Random().Next(123);
     Console.Write (array[i]+ " ");
-
-    if (num==array[i])
+    if ((array[i]>9)&&(array[i]<100))
     {
-        isFind = true;
+        result+=1;
     }
 }
-Console.WriteLine();
-if (isFind==true)
-{
-    Console.WriteLine("Да");
-}
-else
-{
-    Console.WriteLine("Нет");
-}
+Console.WriteLine("Кол-во = " + result);
