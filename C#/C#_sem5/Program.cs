@@ -31,20 +31,52 @@
 // Задача 32. Заменить элементы массива: положительные 
 // на соответствующие отрицательные и наоборот.
 
+// Console.Clear();
+// int arrayLength = 10;
+// int[] array = new int[arrayLength];
+
+// for (int i=0; i< array.Length; i++)
+// {
+//     array[i] = new Random().Next(-9,10);
+//     Console.Write (array[i]+ " ");
+// }
+// Console.WriteLine();
+
+// for (int i=0; i< array.Length; i++)
+// {
+//     array[i] = array[i] * -1;
+//     Console.Write (array[i]+ " ");
+// }
+// Console.WriteLine();
+
+// Задача  33. Задайте массив. Напишите программу, 
+// которая определяет, присутствует ли заданное число в массиве.
+
 Console.Clear();
 int arrayLength = 10;
 int[] array = new int[arrayLength];
+
+Console.Write("Введите число: ");
+int num = Convert.ToInt32(Console.ReadLine());
+
+bool isFind=false;
 
 for (int i=0; i< array.Length; i++)
 {
     array[i] = new Random().Next(-9,10);
     Console.Write (array[i]+ " ");
-}
-Console.WriteLine();
 
-for (int i=0; i< array.Length; i++)
-{
-    array[i] = array[i] * -1;
-    Console.Write (array[i]+ " ");
+    if (num==array[i])
+    {
+        isFind = true;
+    }
 }
 Console.WriteLine();
+if (isFind==true)
+{
+    Console.WriteLine("Да");
+}
+else
+{
+    Console.WriteLine("Нет");
+}
