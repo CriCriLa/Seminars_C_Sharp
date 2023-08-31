@@ -22,19 +22,52 @@
 // Задача 36. Задайте одномерный массив, заполненный случайными числами.
 // Найти сумму элементов, стоящих на нечетных позициях.
 
+// Console.Clear();
+// int arrayLength = 5;
+// int[]  array = new int[arrayLength];
+// int sum = 0;
+
+// for (int i= 0; i<array.Length; i++)
+// {
+//     array[i] = new Random().Next(99);
+//     Console.Write(array[i] + " ");
+//     if (i%2==1)
+//     {
+//         sum = sum+array[i];
+//     }
+// }
+// Console.WriteLine();
+// Console.WriteLine("Сумма элементов: "+ sum);
+
+// Задача 38. Задайте массив вещественных чисел. Найдите разницу 
+// между максимальным и минимальным элементом массива.
+
 Console.Clear();
 int arrayLength = 5;
-int[]  array = new int[arrayLength];
-int sum = 0;
+double[]  array = new double[arrayLength];
+double maxNum = 0;
+double minNum = 0;
 
 for (int i= 0; i<array.Length; i++)
 {
-    array[i] = new Random().Next(99);
+    array[i] = new Random().NextDouble()*40;
     Console.Write(array[i] + " ");
-    if (i%2==1)
+    if (i==0)
     {
-        sum = sum+array[i];
+        maxNum=array[i];
+        minNum = array[i];
+    }
+    else 
+    {
+        if (array[i]>maxNum) 
+        {
+            maxNum = array[i];
+        }
+        else if (array[i]<minNum)
+        {
+            minNum  = array[i];
+        }
     }
 }
 Console.WriteLine();
-Console.WriteLine("Сумма элементов: "+ sum);
+Console.WriteLine("Разница между max и min: "+ (maxNum-minNum));
