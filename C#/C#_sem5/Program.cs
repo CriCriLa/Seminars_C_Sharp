@@ -84,19 +84,48 @@
 // Задача 35. Задать одномерный массиы из 123 случайных чисел. 
 // Найти количество элементов массива, значения которых лежат в отрезке [10,99]
 
+// Console.Clear();
+// int arrayLength = 123;
+// int[] array = new int[arrayLength];
+
+// int result=0;
+
+// for (int i=0; i< array.Length; i++)
+// {
+//     array[i] = new Random().Next(123);
+//     Console.Write (array[i]+ " "); 
+//     if ((array[i]>9)&&(array[i]<100))
+//     {
+//         result+=1;
+//     }
+// }
+// Console.WriteLine("Кол-во = " + result);
+ 
+//  Задача 37. Найти произведение пар числе в массиве. 
+//  Парой считаются первое и последнее, второе и предпоследнее 
+//  число и т.д. Результат вывести в новом массиве.
+
 Console.Clear();
-int arrayLength = 123;
+int arrayLength = 7;
 int[] array = new int[arrayLength];
+int[] array2 = new int[array.Length/2+array.Length%2];
 
-int result=0;
-
-for (int i=0; i< array.Length; i++)
+for (int i = 0; i<array.Length; i++)
 {
-    array[i] = new Random().Next(123);
-    Console.Write (array[i]+ " ");
-    if ((array[i]>9)&&(array[i]<100))
-    {
-        result+=1;
-    }
+    array[i] = new Random().Next(10);
+    Console.Write(array[i] + " ");
 }
-Console.WriteLine("Кол-во = " + result);
+Console.WriteLine();
+
+for (int i = 0; i<array2.Length; i++)
+{
+    array2[i] = array[i]*array[array.Length-1-i];
+    if (i==arrayLength-1-i)
+    {
+    
+        array2[i] = array[i];
+    
+    }
+    Console.Write(array2[i] + " ");
+}
+Console.WriteLine();
