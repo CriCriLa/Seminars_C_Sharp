@@ -106,7 +106,7 @@
 //  число и т.д. Результат вывести в новом массиве.
 
 Console.Clear();
-int arrayLength = 7;
+int arrayLength = 6;
 int[] array = new int[arrayLength];
 int[] array2 = new int[array.Length/2+array.Length%2];
 
