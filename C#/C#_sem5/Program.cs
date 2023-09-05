@@ -101,12 +101,12 @@
 // }
 // Console.WriteLine("Кол-во = " + result);
  
-//  Задача 37. Найти произведение пар числе в массиве. 
+//  Задача 37. Найти произведение пар чисел в массиве. 
 //  Парой считаются первое и последнее, второе и предпоследнее 
 //  число и т.д. Результат вывести в новом массиве.
 
 Console.Clear();
-int arrayLength = 6;
+int arrayLength = 7;
 int[] array = new int[arrayLength];
 int[] array2 = new int[array.Length/2+array.Length%2];
 
