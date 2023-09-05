@@ -50,6 +50,42 @@
 // у которых оба индекса четные, и заменить их на их квадраты.
 
 
+// Console.Clear();
+
+// Console.Write ("Введите первое число: ");
+// int rows = Convert.ToInt32(Console.ReadLine());
+
+// Console.Write ("Введите второе число: ");
+// int columns = Convert.ToInt32(Console.ReadLine());
+
+// int[,] matrix=new int[rows,columns];
+
+// for (int i= 0; i<matrix.GetLength(0); i++)
+// {
+//     for (int j=0; j<matrix.GetLength(1); j++)
+//     {
+//         matrix[i,j] = new Random().Next(0,10);
+//         Console.Write (matrix [i,j]+ " ");
+//     }
+//     Console.WriteLine();
+// }
+//     Console.WriteLine("_____________");
+// for (int i= 0; i<matrix.GetLength(0); i++)
+// {
+//     for (int j=0; j<matrix.GetLength(1); j++)
+//     {
+//         if (i%2==0 && j%2==0)
+//         {
+//            matrix[i,j] = Convert.ToInt32(Math.Pow(matrix[i,j],2)); //возводим в квадрат
+//         }
+//         Console.Write (matrix [i,j]+ " ");
+//     }
+//     Console.WriteLine();
+// }
+
+// Задача 51. Задать двумерный массив. Найти сумму элементов,
+// находящихся на главной диагонали (с индексами (0,0); (1,1) и т.д) 
+
 Console.Clear();
 
 Console.Write ("Введите первое число: ");
@@ -59,6 +95,7 @@ Console.Write ("Введите второе число: ");
 int columns = Convert.ToInt32(Console.ReadLine());
 
 int[,] matrix=new int[rows,columns];
+int sum = 0;
 
 for (int i= 0; i<matrix.GetLength(0); i++)
 {
@@ -66,19 +103,9 @@ for (int i= 0; i<matrix.GetLength(0); i++)
     {
         matrix[i,j] = new Random().Next(0,10);
         Console.Write (matrix [i,j]+ " ");
+        if (i==j) sum=sum +matrix[i,j];
     }
     Console.WriteLine();
 }
-    Console.WriteLine("_____________");
-for (int i= 0; i<matrix.GetLength(0); i++)
-{
-    for (int j=0; j<matrix.GetLength(1); j++)
-    {
-        if (i%2==0 && j%2==0)
-        {
-           matrix[i,j] = Convert.ToInt32(Math.Pow(matrix[i,j],2)); //возводим в квадрат
-        }
-        Console.Write (matrix [i,j]+ " ");
-    }
-    Console.WriteLine();
-}
+
+Console.WriteLine("Сумма равна "+ sum);
