@@ -42,20 +42,38 @@
 // N чисел  Фибоначчи. Первые два числа 0 и 1.
 
 
+// Console.Clear();
+
+// Console.Write("Введите число:");
+// int num = Convert.ToInt32(Console.ReadLine());
+
+// int firstNum = 0;
+// int secondNum = 1;
+
+// Console.Write(firstNum + " "+secondNum + " ");
+// for (int i = 3; i<= num; i++)
+// {
+//     int newNum = firstNum+secondNum;
+//     Console.Write(newNum+" ");
+//     firstNum = secondNum;
+//     secondNum = newNum;
+// }
+
+// Задача 39. Написать программу, которая переврнет одномерный массив
+// (последний эл-т будет на первом месте, а первый на последнем и т.д.)
+
 Console.Clear();
 
-Console.Write("Введите число:");
-int num = Convert.ToInt32(Console.ReadLine());
+int[] array = new int[] {1,2,3,4,5};
 
-int firstNum = 0;
-int secondNum = 1;
-
-Console.Write(firstNum + " "+secondNum + " ");
-for (int i = 3; i<= num; i++)
+for (int i = 0; i< array.Length/2; i++)
 {
-    int newNum = firstNum+secondNum;
-    Console.Write(newNum+" ");
-    firstNum = secondNum;
-    secondNum = newNum;
+    int temp = array[i];
+    array[i] = array[array.Length-1-i];
+    array[array.Length-1-i] = temp;
 }
 
+for (int i =0; i<array.Length; i++)
+{
+    Console.Write(array[i]+ " ");
+}
