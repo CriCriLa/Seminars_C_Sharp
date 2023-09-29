@@ -25,6 +25,35 @@
 // M = 1; N = 15 -> 120
 // M = 4; N = 8. -> 30
 
+// Console.Clear();
+// Console.Write("Введите первое число: "); 
+// int num1 = Convert.ToInt32(Console.ReadLine());
+
+// Console.Write("Введите второе число: "); 
+// int num2 = Convert.ToInt32(Console.ReadLine());
+
+// int SumElement (int start, int end)
+// {
+//     if (start == end)
+//     {
+//         return start;
+//     }
+//     return (start+ SumElement(start+1, end));
+// }
+
+// if (num1<num2)
+// {
+//     Console.WriteLine(SumElement(num1, num2));
+// }
+// else 
+// {
+//     Console.WriteLine(SumElement(num2, num1));
+// }
+
+// Задача 68: Напишите программу вычисления функции Аккермана с помощью рекурсии. Даны два неотрицательных числа m и n.
+// m = 2, n = 3 -> A(m,n) = 9
+// m = 3, n = 2 -> A(m,n) = 29
+
 Console.Clear();
 Console.Write("Введите первое число: "); 
 int num1 = Convert.ToInt32(Console.ReadLine());
@@ -32,20 +61,17 @@ int num1 = Convert.ToInt32(Console.ReadLine());
 Console.Write("Введите второе число: "); 
 int num2 = Convert.ToInt32(Console.ReadLine());
 
-int SumElement (int start, int end)
+int Akkerman (int m, int n)
 {
-    if (start == end)
+    if (m==0)
     {
-        return start;
+        return n+1;
     }
-    return (start+ SumElement(start+1, end));
+    if (n==0)
+    {
+        return Akkerman (m-1,1);
+    }
+    return Akkerman(m-1, Akkerman (m,n-1));
 }
 
-if (num1<num2)
-{
-    Console.WriteLine(SumElement(num1, num2));
-}
-else 
-{
-    Console.WriteLine(SumElement(num2, num1));
-}
+Console.WriteLine(Akkerman(num1, num2));
